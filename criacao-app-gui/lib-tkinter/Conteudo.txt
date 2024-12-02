@@ -1,0 +1,58 @@
+Essa biblioteca GUI é considerada a padrão para desenvolvimento de interface gráfica no python
+Ela fornece uma interface orientada a objetos que facilita a implementação de programas interativos.
+
+- Para usar o Tkinter é necessário executar as seguintes etapas:
+
+Importar a biblioteca Tkinter.
+Criar a janela principal do programa GUI.
+Adicionar um ou mais dos widgets (componentes).
+Entrar no loop de evento principal para tratar os eventos disparados pelo usuário.
+
+------------------------------------------------------------------------------------------------------
+
+Widgets Tkinter
+
+- O Tkinter possui diversos componentes (widgets), tais como botões, rótulos e caixas de texto usados para criar aplicações interativas com o usuário.
+- Os principais widgets do Tkinter, de acordo com Meier (2015), são:
+
+Botão (Button)	É usado para exibir os botões na aplicação. São usados, por exemplo, para confirmar uma ação de salvar os dados.
+
+Telas (Canvas)	É usado para desenhar formas, como linhas, ovais, polígonos e retângulos.
+
+Botão de verificação (Checkbutton)	É usado para exibir várias opções como caixas de seleção. O usuário pode selecionar várias opções ao mesmo tempo.
+
+Entrada de texto (Entry)	É usado para exibir uma caixa de texto de linha única para que o usuário digite valores de entrada.
+
+Quadros (Frame)	É usado como um widget de contêiner, isso significa que outros componentes são adicionados a ele com o objetivo de organizar outros widgets.
+
+Rótulo (Label)	É usado para fornecer uma legenda de linha única para outros widgets. Também pode conter imagens.
+
+Caixa de listagem (Listbox)	É usado para fornecer uma lista de opções para um usuário.
+
+Menubutton	É usado para exibir opções no menu.
+
+Menu	É usado para fornecer várias possibilidades de comandos a um usuário. Esses comandos estão contidos no Menubutton.
+
+Mensagem (Message)	É usado para exibir uma mensagem de texto e um botão para o usuário confirmar uma ação/td>
+
+Botão de rádio (Radiobutton)	É usado para exibir várias opções, como botões de rádio. O usuário pode selecionar apenas uma opção por vez.
+
+Escala (Scale)	É usado para fornecer um widget de controle deslizante.
+
+Barra de rolagem (Scrollbar)	É usado para adicionar capacidade de rolagem a vários widgets.
+
+Texto (Text)	É usado para exibir texto em várias linhas.
+
+Toplevel	É usado para fornecer um contêiner de janela separado.
+
+Spinbox	É uma variante do widget Entry padrão. Ele é usado para selecionar um número fixo de valores.
+
+PanedWindow	É um widget de contêiner que pode conter qualquer número de painéis, organizados horizontalmente ou verticalmente.
+
+LabelFrame	É um widget de contêiner simples. Seu objetivo principal é atuar como um espaçador, ou contêiner para layouts de janela.
+
+tkMessageBox	Este módulo é usado para exibir caixas de mensagens.
+
+
+- Cada um desses widgets possuem propriedades que permitem personalizar tamanhos, cores e fontes que serão exibidos para o usuário.
+
