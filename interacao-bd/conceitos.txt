@@ -1,0 +1,69 @@
+- python possui muitas bibliotecas para interagir com diversos bancos de dados
+- o foco será a integração com o PostgreSQL
+- Isso porque pode ser usado gratuitamente, possui bastante documentação disponível on-line e pode ser aplicado para resolver problemas reais.
+
+- Desenvolver um programa em que seja possível realizar as operações CRUD para gerenciar uma agenda telefônica que vai tratar de nomes e números de telefones
+- aplicação CRUD para que os usuários possam interagir com o sistema para inserir, modificar, consultar e excluir dados de uma agenda telefônica, e que essas operações fiquem sob a responsabilidade do sistema gerenciador de banco de dados.
+
+- O PostgreSQL pode ser integrado ao python usando o módulo psycopg2. 
+- Trata-se de um adaptador de banco de dados PostgreSQL.
+
+- Para interagir com o banco de dados PostgreSQL com o uso da biblioteca psycopg2, primeiro é necessário criar um objeto Connection
+- que representa o banco de dados, e, em seguida, pode-se criar um objeto cursor que será bastante útil para executar todas as instruções SQL
+
+psycopg2.connect (database = "NomeDoBancoDeDados", user = "LoginDoUsuário", senha = "SenhaDoBancoDeDados", host = "EndereçoDaAplicação", porta = "NúmeroDaPorta")
+- A conexão com o banco de dados PostgreSQL é feita com essa API.
+- banco de dados retorna um objeto de conexão, se o banco de dados for aberto com sucesso
+- Para aplicações que vão rodar localmente, utiliza-se o endereço de localhost dado por 127.0.0.1
+- A porta de comunicação padrão do PostgreSQL é a "5432", mas esse valor pode ser mudado.
+
+
+connection.cursor ()
+- Esta API cria um cursor que será usado ao longo da programação para interagir com o banco de dados com python.
+
+
+cursor.execute (sql [, parâmetros opcionais])
+- Esta rotina é aplicada para executar uma instrução SQL. A instrução SQL pode ser parametrizada.
+
+
+cursor.executemany (sql, sequência_de_parâmetros)
+- Esta rotina executa um comando SQL em todas as sequências de parâmetros.
+
+
+cursor.callproc ('NomeDaFunção_Ou_NomeDoProcedimentoArmazenado', [parâmetros IN e OUT,])
+- Esta rotina faz chamada para uma função ou um procedimento armazenado do banco de dados
+- Os parâmetros IN e OUT correspondem, respectivamente, aos parâmetros de entrada e saída da função ou do procedimento armazenado e devem ser separados por vírgulas.
+
+
+cursor.rowcount
+- Este atributo retorna o número total de linhas do banco de dados que foram modificadas, inseridas ou excluídas pela última instrução de “execute“.
+
+
+connection.commit()
+- Este método confirma a transação atual. 
+- É necessário que ele seja chamado ao final de uma sequência de operações sql, pois, caso contrário, tudo o que foi feito desde a última chamada até o “commit” não será visível em outras conexões de banco de dados.
+
+
+connection.rollback()
+- Este método reverte quaisquer mudanças no banco de dados desde a última chamada até o “commit”.
+
+
+connection.close()
+- Este método fecha a conexão com o banco de dados
+- Ele não chama o “commit” automaticamente
+- Se a conexão com o banco de dados for fechada sem chamar o “commit” primeiro, as alterações serão perdidas.
+
+
+cursor.fetchone()
+- Este método busca a próxima linha de um conjunto de resultados de consulta, retornando uma única sequência, ou nenhuma, quando não há mais dados disponíveis.
+
+
+cursor.fetchmany([size = cursor.arraysize])
+- Esta rotina busca o próximo conjunto de linhas de um resultado de consulta, retornando uma lista. 
+- Uma lista vazia é retornada quando não há mais linhas disponíveis
+-  O método tenta buscar quantas linhas forem indicadas pelo parâmetro “size”.
+
+
+cursor.fetchall() 
+- Esta rotina busca todas as linhas (restantes) de um resultado de consulta, retornando uma lista
+- Uma lista vazia é retornada quando nenhuma linha está disponível.
